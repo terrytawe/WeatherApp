@@ -1,6 +1,6 @@
-document.getElementById("inputGroupSelect01").addEventListener("change", function () {
-  const selectedValue = this.value;
-  const selectedText = this.options[this.selectedIndex].text;
+document.getElementById("inputGroupSelect01").addEventListener("change", function (e) {
+  const selectedValue = e.target.value;
+  const selectedText = e.target.options[e.target.options.selectedIndex].text;
 
   fetch("/", {
     method: "POST",
